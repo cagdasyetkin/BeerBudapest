@@ -17,3 +17,17 @@ df_beer$StdevDreher <- round(sd(df_beer$price_dreher), 2)
 
 df_beer$VarCheap <- round(var(df_beer$price_cheapest), 2)
 df_beer$VarDreher <- round(var(df_beer$price_dreher), 2)
+
+#histograms
+library(ggplot2)
+
+ggplot(df_beer, aes(price_cheapest)) + geom_histogram()
+ggplot(df_beer, aes(price_cheapest)) + geom_histogram(binwidth = 5)
+ggplot(df_beer, aes(price_cheapest)) + geom_histogram(binwidth = 15)
+
+ggplot(df_beer, aes(price_dreher)) + geom_histogram()
+ggplot(df_beer, aes(price_dreher)) + geom_histogram(binwidth = 5)
+ggplot(df_beer, aes(price_dreher)) + geom_histogram(binwidth = 15)
+
+
+
