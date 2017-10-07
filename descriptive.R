@@ -6,3 +6,14 @@ View(df_beer)
 df_beer$date_collection <- as.Date(df_beer$date_collection, "%Y.%m.%d")
 df_beer$district_nr <- as.factor(df_beer$district_nr)
 str(df_beer)
+
+#mean, median, variance, stdev
+
+df_beer$MeanCheap <- round(mean(df_beer$price_cheapest), 2)
+df_beer$MeanDreher <- round(mean(df_beer$price_dreher), 2)
+
+df_beer$StdevCheap <- round(sd(df_beer$price_cheapest), 2)
+df_beer$StdevDreher <- round(sd(df_beer$price_dreher), 2)
+
+df_beer$VarCheap <- round(var(df_beer$price_cheapest), 2)
+df_beer$VarDreher <- round(var(df_beer$price_dreher), 2)
